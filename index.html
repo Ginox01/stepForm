@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Step Form</title>
+  </head>
+  <body>
+    <section id="wrap-app">
+      <div id="wrap-step">
+        <div data-step="0" class="step current"><span>1</span></div>
+        <div data-step="1" class="step next"><span>2</span></div>
+        <div data-step="2" class="step next"><span>3</span></div>
+      </div>
+      <form action="https://www.google.it/" name="forma">
+        <div id="wrap-fields">
+          <div class="field">
+            <input type="text" name="name" placeholder="Nome*" />
+            <input type="text" name="surname" placeholder="Cognome*" />
+          </div>
+          <div class="field">
+            <input type="text" name="mail" placeholder="E-mail*" />
+            <input type="text" name="phone" placeholder="Telefono" />
+          </div>
+          <div class="field">
+            <input type="text" name="city" placeholder="Città" />
+            <input type="text" name="postal address" placeholder="CAP" />
+          </div>
+        </div>
+        <p id="error-message"></p>
+        <div id="wrap-btns">
+          <p id="btn-prev">Prev</p>
+          <p id="btn-next">Next</p>
+          <button type="submit" id="btn-submit">Confirm</button>
+        </div>
+      </form>
+    </section>
+
+    <script type="module">
+      import javaModule from "./js/index.js";
+      window.addEventListener("DOMContentLoaded", javaModule());
+    </script>
+  </body>
+</html>

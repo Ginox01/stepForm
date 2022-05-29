@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+#wrap-app {
+  width: 80%;
+  padding: 1rem;
+  background-color: rgb(28, 0, 28);
+  border-radius: 50px;
+  border: 1px solid rgb(60, 0, 60);
+  transition: all 0.6s;
+  overflow: hidden;
+}
+
+#wrap-app:hover {
+  box-shadow: 0 0 50px 1px fuchsia;
+}
+
+#wrap-step {
+  display: flex;
+}
+
+.step {
+  flex-grow: 1;
+  margin: 15px 0;
+  position: relative;
+  transition: all 0.6s;
+}
+
+.step > span {
+  position: absolute;
+  top: -10px;
+  left: 30%;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.valid {
+  border-bottom: 1px solid fuchsia;
+}
+
+.valid > span {
+  background-color: fuchsia;
+}
+
+.current {
+  border-bottom: 1px solid fuchsia;
+}
+
+.current > span {
+  background-color: rgb(28, 0, 28);
+  border: 1px solid fuchsia;
+  box-shadow: 0 0 5px 1px fuchsia;
+}
+
+.next {
+  border-bottom: 1px solid white;
+  color: black;
+}
+
+.next > span {
+  background-color: white;
+}
+
+#wrap-fields {
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+  gap: 10%;
+}
+
+input {
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted white;
+  color: fuchsia;
+}
+
+input:focus {
+  border-bottom: 1px dotted fuchsia;
+}
+
+::selection {
+  background-color: fuchsia;
+  color: white;
+}
+
+.field {
+  width: 100%;
+  flex: 1 0 100%;
+  transition: all 0.6s;
+}
+
+#error-message {
+  color: fuchsia;
+}
+
+#wrap-btns {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+#btn-prev {
+  padding: 3px 7px;
+  background-color: dimgray;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#btn-next {
+  margin-left: auto;
+  padding: 3px 7px;
+  background-color: fuchsia;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#btn-submit {
+  display: none;
+  margin-left: auto;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 7px;
+  border-radius: 20px;
+  background-color: fuchsia;
+  color: white;
+  box-shadow: 0 0 4px 1px fuchsia;
+  cursor: pointer;
+}
